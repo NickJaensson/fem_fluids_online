@@ -15,7 +15,7 @@ parts:
       - file: References
 
   - caption: Appendix
-    numbered: false
+    numbered: true
     chapters:
       - file: A_Summary_mathematics
 

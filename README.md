@@ -1,5 +1,5 @@
 # fem_fluids_online
-This repo contains the source code to puild a Jupyter book for
+This repo contains the source code to build a Jupyter book for
 *FEM for fluids*.
 
 The book can be accessed here: 
@@ -15,4 +15,4 @@ Compile the book by running in the root directory of the project
 ```bash
 jupyter-book build .
 ```
-The book wwill be compiled in html format in the `_build` directory.
+The book will be compiled in html format in the `_build` directory.

@@ -158,7 +158,7 @@ which is positive for $v\neq0$. The choice of $v=0$ must be excluded here, since
 
  ````
 
- The first condition in Equation {eq}'eq10-chap2' leads to the term linear in $\epsilon$ to be zero:
+ The first condition in Equation {eq}`eq10-chap2` leads to the term linear in $\epsilon$ to be zero:
 
 $$
  \int_\Omega\alpha\nao v\cdot\nao u\,d\Omega-\int_\Omega vf\,d\Omega+\int_{\Gamma_\text{N}}vh_\text{N}\,d\Gamma =0
@@ -655,7 +655,7 @@ In the finite element method the global basis functions are constructed element 
 First, we consider linear basis functions on a 1D element. We need two nodes with two corresponding basis functions $\lambda_1(x)$ and $\lambda_2(x)$ to define a linear polynomial on the element. The two nodes are positioned at the ends of the element, as shown in Figure {numref}`fig4-chap2`, to obtain continuity between adjacent elements [^3]. The linear basis functions are defined by
 
 
-1.  $\lambda_i(x_j)=\delta_{ij}$,\quad $i,j=1,2$.
+1.  $\lambda_i(x_j)=\delta_{ij}, \quad i,j=1,2$.
 2.  $\lambda_i(x)$ linear in $x$: $\lambda_i(x)=a_i+b_i x$ for all $x\in[x_1,x_2]$.
 
 where $x_1$ and $x_2$ are the $x$-coordinates of node 1 and 2, respectively.
@@ -670,7 +670,7 @@ Element in 1D with two end nodes to define linear basis functions.
 ````{exercise} Exercise 2.9
 :label: ex:2.9
 
- A choice of $v=c$, where $c\neq0$ is a constant, leads to a zero value of the second derivative. Why is this not a valid choice  Show that the four coefficients $a_i$, $b_i$, $i=1,2$ can be found from the matrix equation
+ Show that the four coefficients $a_i$, $b_i$, $i=1,2$ can be found from the matrix equation
 
 $$
 \begin{pmatrix}
@@ -757,8 +757,9 @@ Using *Lagrange interpolation*, the basis functions for the quadratic
  element given in {numref}`fig5-chap2` become:
 
 $$
- \phi_1(x)=\frac{(x-x_2)(x-x_3)}{(x_1-x_2)(x_1-x_3)},\quad\phi_2(x)=\frac{(x-x_1)(x-x_3)}{(x_2-x_1)(x_2-x_3)},
- \quad\phi_3(x)= \frac{(x-x_1)(x-x_2)}{(x_3-x_1)(x_3-x_2)}
+\phi_1(x)=\frac{(x-x_2)(x-x_3)}{(x_1-x_2)(x_1-x_3)}, \\
+\phi_2(x)=\frac{(x-x_1)(x-x_3)}{(x_2-x_1)(x_2-x_3)}, \\
+\phi_3(x)= \frac{(x-x_1)(x-x_2)}{(x_3-x_1)(x_3-x_2)}
 $$ (eq53-chap2)
 
  Show that for $x_2=(x_1+x_3)/2$ these basis functions are identical to the ones given in Equation {eq}`eq51-chap2`.
@@ -768,7 +769,7 @@ $$ (eq53-chap2)
 For a triangular element in 2D we follow the same approach as for the 1D element. We need three nodes with three corresponding basis functions $\lambda_1(\vek x)$, $\lambda_2(\vek x)$ and $\lambda_3(\vek x)$ to define a linear polynomial on the element. The three nodes are positioned at the vertices of the element, as shown in Figure {numref}`fig6-chap2`, to obtain continuity between adjacent elements.
 The linear basis functions are defined by
 
-1.  $\lambda_i(\vek x_j)=\delta_{ij}$,\quad $i,j=1,2,3$.
+1.  $\lambda_i(\vek x_j)=\delta_{ij},\quad i,j=1,2,3$.
 1.  $\lambda_i(\vek x)$ linear in $\vek x$: $\lambda_i(x)=a_i+b_i x+c_i y$ for all $\vek x\in \Omega_\text{e}$.
 
 where $\vek x_1$, $\vek x_2$ and $\vek x_3$ are the position vectors of the three nodal points at the vertices and
@@ -926,6 +927,8 @@ $$
 \end{split}
 $$ (eq59-chap2)
 
+````
+
 ```{figure-md} fig10-chap2
 
 <img src="media/chap2/fig10-chap2.png"  width="400px">
@@ -933,12 +936,10 @@ $$ (eq59-chap2)
 Tetrahedral element with four nodes in the vertices and six nodes in the middle of the six edges to define quadratic basis functions.
 ```
 
-````
-
 ````{exercise} Exercise 2.17
 :label: ex:2.17
 
-Verify, that the quadratic basis functions in Eq.~\eqref{eq:3Dquadratic} fulfill the Kronecker delta and the partition of unity property.
+Verify, that the quadratic basis functions in {eq}`eq59-chap2` fulfill the Kronecker delta and the partition of unity property.
 
 ````
 
@@ -960,7 +961,7 @@ For the simplex elements of the previous subsection, but also for rectangles and
 A region with a circular hole meshed using straight triangles.
 ```
 
-These problems can be solved by defining the basis functions on a simple fixed reference element in a reference coordinate system $\col\xi$. This is illustrated in Figure {numref}`fig12-chap2` for a triangular element. The basis functions are defined on the reference triangle using the reference coordinates $\col \xi^T=(\xi,\eta)$, i.e. the basis functions become functions of the reference coordinates ($\phi_k(\col\xi)$) and are subsequently mapped onto the real element using the mapping $\col x(\col \xi)$. The mapping $\col x(\col \xi)$
+These problems can be solved by defining the basis functions on a simple fixed reference element in a reference coordinate system. This is illustrated in Figure {numref}`fig12-chap2` for a triangular element, where we collect the actual coordinates in the column vector $\col x = (x_1,x_2)^T$ and the reference coordinates in the column vector $\col x_\text{ref}=(\xi,\eta)^T$. The basis functions are defined on the reference triangle using the reference coordinates, i.e. the basis functions become functions of the reference coordinates ($\phi_k(\col x_\text{ref})$) and are subsequently mapped onto the real element using the mapping $\col x(\col x_\text{ref})$. The mapping $\col x(\col x_\text{ref})$
 should be such that the approximation of the curved boundary is sufficiently accurate. Furthermore, the mapping function on each element must preserve continuity of the global basis functions. We will postpone the proposal of an easy to implement mapping function to the next subsection. First, we will focus on the basis functions defined on the reference element.
 
 ```{figure-md} fig12-chap2
@@ -985,7 +986,7 @@ $$
  \lambda_1(\xi)=\dfrac12(1-\xi),\quad \lambda_2(\xi)=\dfrac12(1+\xi)
 $$ (eq60-chap2)
 
-and therefore the linear element basis functions for the reference element depicted in Figure~\ref{fig:reference_interval1} are $\phi_1=\lambda_1$ and $\phi_2=\lambda_2$.
+and therefore the linear element basis functions for the reference element depicted in {numref}`fig14-chap2` are $\phi_1=\lambda_1$ and $\phi_2=\lambda_2$.
 
 
 ```{figure-md} fig14-chap2
@@ -1189,17 +1190,17 @@ Argue that for the trilinear and triquadratic basis functions we need 8 and 27 n
 ````{exercise} Exercise 2.22
 :label: ex:2.22
 
-(*EZTFEM*) Study the  $P_2$ and $Q_2$ basis functions on the reference triangle and quadrilateral, respectively, using
- the function $\texttt{plot\_basis\_function}$. Determine the position and value of the minimum both from visual
+`EZTFEM` Study the  $P_2$ and $Q_2$ basis functions on the reference triangle and quadrilateral, respectively, using
+ the function `plot_basis_function`. Determine the position and value of the minimum both from visual
  inspection and exact.
 ````
 (Chap2.6.4)=
 ### Isoparametric mapping
 
-As noted in the previous subsection, using piecewise quadratic basis functions together with element shapes that have straight edges results in accuracy loss if the boundary of the domain is curved. It turns out, that this problem can be fixed if we use the basis functions on the reference element $\phi_k(\col \xi)$ for defining the mapping function $\vek x(\col\xi)$ as well:
+As noted in the previous subsection, using piecewise quadratic basis functions together with element shapes that have straight edges results in accuracy loss if the boundary of the domain is curved. It turns out, that this problem can be fixed if we use the basis functions on the reference element $\phi_k(\col x_\text{ref})$ for defining the mapping function $\vek x(\col x_\text{ref})$ as well:
 
 $$
-  \vek x(\col\xi)=\sum_{k=1}^{N} \vek x_k\phi_k(\col\xi) 
+  \vek x(\col x_\text{ref})=\sum_{k=1}^{N} \vek x_k\phi_k(\col x_\text{ref}) 
 $$ (eq68-chap2)
 
 where $\vek x_k$, $k=1,\dots,N$ are the coordinates of the nodal points in an element.
@@ -1236,22 +1237,22 @@ Argue, that linear triangles and bilinear quadrilaterals can be combined in one 
 Consider a bilinear quadrilateral isoparametric element with nodal coordinates:
 
  $$
-    \cols{x}{1}=   
+    \cols{x}_{1}=   
 \begin{pmatrix}
    0 \\
    0
 \end{pmatrix}, \quad 
-    \cols{x}{2}=   
+    \cols{x}_{2}=   
 \begin{pmatrix}
    1 \\
    0
 \end{pmatrix}, \quad
-    \cols{x}{3}=   
+    \cols{x}_{3}=   
 \begin{pmatrix}
    2 \\
    1
 \end{pmatrix}, \quad 
-    \cols{x}{4}=   
+    \cols{x}_{4}=   
 \begin{pmatrix}
    0 \\
    1
@@ -1276,22 +1277,22 @@ $$
  Consider a bilinear quadrilateral isoparametric element with nodal coordinates:
 
 $$
-    \cols{x}{1}=   
+    \cols{x}_{1}=   
 \begin{pmatrix}
    0 \\
    0
 \end{pmatrix}, \quad 
-    \cols{x}{2}=   
+    \cols{x}_{2}=   
 \begin{pmatrix}
    1 \\
    0
 \end{pmatrix}, \quad
-    \cols{x}{3}=   
+    \cols{x}_{3}=   
 \begin{pmatrix}
    2 \\
    2
 \end{pmatrix}, \quad 
-    \cols{x}{4}=   
+    \cols{x}_{4}=   
 \begin{pmatrix}
    0 \\
    1
@@ -1312,7 +1313,7 @@ $$
 
 The exercises show that the basis functions for the bilinear quadrilateral are *not polynomial functions in $(x,y)$*, in general. Only for the subcase of rectangularly shaped elements the basis functions are polynomials.
 
-The final three examples are the 1D quadratic interval,the 2D quadratic triangle and the 2D biquadratic quadrilateral, 
+The final three examples are the 1D quadratic interval, the 2D quadratic triangle and the 2D biquadratic quadrilateral, 
 as shown in Figures {numref}`fig24-chap2`,{numref}`fig25-chap2` and {numref}`fig26-chap2`. The quadratic interval mapping will be a subject of the Exercise {numref}`ex:2.29` below.
 An edge of the triangle and quadrilateral is curved if the middle node is not on the line connecting the vertex points. The mapping will be linear on an edge if the position of the middle node is halfway the connecting line of the two vertices.
 Note, that even if the edges are curved, the boundary might still not match the exact boundary. However, positioning the nodes on the exact boundary will introduce an error that is sufficiently small to not affect convergence rates [^4] {cite}`Thomasset1981`. 
@@ -1408,10 +1409,10 @@ $$
      \deriv{}{x}=F(\xi)^{-1}\deriv{}{\xi}
 $$ (eq72-chap2)
 
-For computing the discrete system of equations in 2D we need the nabla operator
+For computing the discrete system of equations in 2D we need the nabla operator[^5]
 
 $$
- \col\nabla=   
+ \colnabla=   
     \begin{pmatrix}
       \dpderiv{\,\,\,}{x_1} \\[2ex]
       \dpderiv{\,\,\,}{x_2}
@@ -1422,7 +1423,7 @@ to be expressed in terms of the reference coordinates.
 For that, we write the mapping as follows
 
 $$
-  \col x(\col \xi)=
+  \col x(\col x_\text{ref})=
     \begin{pmatrix}
       x_1(\xi,\eta) \\
       x_2(\xi,\eta) 
@@ -1432,7 +1433,7 @@ $$
 and find
 
 $$
-\cols{\nabla}{\text{ref}}=
+\colnabla_{\text{ref}}=
     \begin{pmatrix}
       \dpderiv{\,}{\xi} \\[2ex]
       \dpderiv{\,}{\eta}
@@ -1447,29 +1448,29 @@ $$
     \end{pmatrix}
 $$ (eq73-chap2)
 
-where the Jacobian matrix $\mat F(\col\xi)$ of the mapping $\col x(\col \xi)$ is given by
+where the Jacobian matrix $\mat F(\col x_\text{ref})$ of the mapping $\col x(\col x_\text{ref})$ is given by
 
 $$
-    \mat F(\col{\xi})=
+    \mat F(\col x_\text{ref})=
     \begin{pmatrix}
       \dpderiv{x_1}{\xi} & \dpderiv{x_1}{\eta}\\[2ex]
       \dpderiv{x_2}{\xi} & \dpderiv{x_2}{\eta}
-    \end{pmatrix}=(\cols{\nabla}{\text{ref}}\col{x^T})^T
+    \end{pmatrix}=(\colnabla_{\text{ref}}\col{x}^T)^T
 $$ (eq74-chap2)
 
 which for *isoparametric* elements becomes:
 
 $$
- \mat F(\col\xi)=(\cols{\nabla}{\text{ref}}\col{x^T})^T=\sum_{k=1}^{N}\cols{x}{k}\cols{\nabla}{\text{ref}}^T\phi_k(\xi)
+ \mat F(\col x_\text{ref})=(\colnabla_{\text{ref}}\col{x}^T)^T=\sum_{k=1}^{N}\cols{x}_{k}\colnabla_{\text{ref}}^T\phi_k(\xi)
 $$ (eq75-chap2)
 
 From Equation {eq}`eq73-chap2`, we find that
 
 $$
-     \col\nabla=\begin{pmatrix}
+     \colnabla=\begin{pmatrix}
       \dpderiv{\,\,\,}{x_1} \\[2ex]
       \dpderiv{\,\,\,}{x_2}
-    \end{pmatrix}=\mat F^{-T}(\col\xi)
+    \end{pmatrix}=\mat F^{-T}(\col x_\text{ref})
     \begin{pmatrix}
       \dpderiv{\,}{\xi} \\[2ex]
       \dpderiv{\,}{\eta}
@@ -1479,7 +1480,7 @@ $$ (eq76-chap2)
 Similarly, we find in 3D:
 
 $$
-     \col\nabla=\begin{pmatrix}
+     \colnabla=\begin{pmatrix}
       \dpderiv{\,\,\,}{x_1} \\[2ex]
       \dpderiv{\,\,\,}{x_2} \\[2ex]
       \dpderiv{\,\,\,}{x_3}
@@ -1491,28 +1492,28 @@ $$
     \end{pmatrix}
 $$ (eq77-chap2)
 
-with the Jacobian matrix $\mat F(\col\xi)$ now given by
+with the Jacobian matrix $\mat F(\col x_\text{ref})$ now given by
 
 $$
-    \mat F(\col\xi)=
+    \mat F(\col x_\text{ref})=
     \begin{pmatrix}
       \dpderiv{x_1}{\xi} & \dpderiv{x_1}{\eta} & \dpderiv{x_1}{\zeta}\\[2ex]
       \dpderiv{x_2}{\xi} & \dpderiv{x_2}{\eta} & \dpderiv{x_2}{\zeta}\\[2ex]
       \dpderiv{x_3}{\xi} & \dpderiv{x_3}{\eta} & \dpderiv{x_3}{\zeta}
-    \end{pmatrix}=(\cols{\nabla}{\text{ref}}\col{x^T})^T
+    \end{pmatrix}=(\colnabla_{\text{ref}}\col{x}^T)^T
 $$ (eq78-chap2)
 
 which for *isoparametric* elements becomes:
 
 $$
- \mat F(\col\xi)=(\cols{\nabla}{\text{ref}}\col{x^T})^T=\sum_{k=1}^{N}\cols{x}{k}\cols{\nabla}{\text{ref}}^T\phi_k(\xi)
+ \mat F(\col x_\text{ref})=(\colnabla_{\text{ref}}\col{x}^T)^T=\sum_{k=1}^{N}\cols{x}_{k}\colnabla_{\text{ref}}^T\phi_k(\xi)
 $$ (eq79-chap2)
 
 <a name="Remark:2.16"></a>
 ```{admonition} Remark 2.16
 :class: note
 
-It is required that the Jacobian matrix $\mat F(\col\xi)$ is not singular, i.e. $\det F(\col\xi)\neq0$ for all $\col\xi\in\Omega_\text{e,ref}$, where $\Omega_\text{e,ref}$ is the element reference domain. This is equivalent to the requirement that $\col x(\col\xi)$ is an invertible mapping.
+It is required that the Jacobian matrix $\mat F(\col x_\text{ref})$ is not singular, i.e. $\det F(\col x_\text{ref})\neq0$ for all $\col x_\text{ref}\in\Omega_\text{e,ref}$, where $\Omega_\text{e,ref}$ is the element reference domain. This is equivalent to the requirement that $\col x(\col x_\text{ref})$ is an invertible mapping.
 ```
 
 ````{exercise} Exercise 2.30
@@ -1522,11 +1523,10 @@ Argue that an integral over the element domain $\Omega_\text{e}$ can be written 
 
 $$
 \int_{\Omega_\text{e}}f(\col x)\, d\Omega=
-\int_{\Omega_\text{e,ref}}f(\col x(\col \xi)|\!\det\mat F(\col \xi)|d\Omega_\text{ref}
+\int_{\Omega_\text{e,ref}}f(\col x(\col x_\text{ref})|\!\det\mat F(\col x_\text{ref})|d\Omega_\text{ref}
 $$ (eq80-chap2)
 
 where $d\Omega_\text{ref}=d\xi$, $d\xi d\eta$ or $d\xi d\eta d\zeta$ in 1D, 2D and 3D, respectively.
-$d\Omega_\text{ref}=d\xi d\eta d\zeta$ in 3D.
  
 ````
 
@@ -1560,16 +1560,16 @@ where $n_\text{e}$ is the number of elements in the domain $\Omega$ and $n_\text
 ```{admonition} Remark 2.17
 :class: note
 
-In *TFEM* and *EZTFEM* the evaluation of the boundary integral is performed on a separate “mesh” for the boundary, consisting of curves in 2D and surfaces in 3D (*TFEM* only). The curves/surfaces conform with the element edges of the domain elements. Thus, for example, if the domain elements are tetrahedra, the surface consists of triangles.   
+In `TFEM` and `EZTFEM` the evaluation of the boundary integral is performed on a separate “mesh” for the boundary, consisting of curves in 2D and surfaces in 3D (`TFEM` only). The curves/surfaces conform with the element edges of the domain elements. Thus, for example, if the domain elements are tetrahedra, the surface consists of triangles.   
 ```
 
 Evaluating the element system matrix and vector requires integration over the element region $\Omega_\text{e}$. These integrals can be transformed to integrals over the reference domain $\Omega_\text{e,ref}$ according to Equation {eq}`eq80-chap2`. This means, that in practice we only need to integrate over a fixed reference interval, triangle, tetrahedron, square or cube. We will use Gauss-Legendre numerical integration for that, which means that an integral over the reference domain is written as a finite sum 
 
 $$
- \int_{\Omega_\text{e,ref}}f(\col{\xi})\, d\Omega_\text{ref}\approx\sum_{k=1}^{N_\text{g}}w_k f(\cols{\xi}{k})
+ \int_{\Omega_\text{e,ref}}f(\col x_\text{ref})\, d\Omega_\text{ref}\approx\sum_{k=1}^{N_\text{g}}w_k f(\col x_{\text{ref},{k}})
 $$ (eq83-chap2)
 
-where the *integration points* and *weights* $(\cols{\xi}{k},w_k)$, $k=1,\dots,N_\text{g}$ are chosen such that the order of polynomials that can be integrated exactly is as high as possible. 
+where the *integration points* and *weights* $(\col x_{\text{ref},{k}},w_k)$, $k=1,\dots,N_\text{g}$ are chosen such that the order of polynomials that can be integrated exactly is as high as possible. 
 
 In Table {numref}`table1-chap2` the values of $(\xi_k,w_k)$, $k=1,2,3$ on the reference interval $[-1,1]$ are given in analytical form. Note, that the integration points are symmetric around 0 and fall within the interval $[-1,1]$, all weights are positive and the sum is 2, the length of the interval. The integration points are the roots of the Legendre polynomials, hence the name Gauss-Legendre. The highest polynomial order that can be integrated exactly is $2N_\text{g}-1$. In practice we prefer to use tabulated data, since these are
 available for much higher order. Analytical expressions are known up to $N_\text{g}=5$ {cite}`Weisstein1`.
@@ -1586,7 +1586,7 @@ available for much higher order. Analytical expressions are known up to $N_\text
 
 ```
 
-For triangles and tetrahedra tabulated data is available from {cite}`Zhang2009`, which give integration rules up to order 21 ($N_\text{g}=91$) for triangles and up to order 14 ($N_\text{g}=236$) for tetrahedra. The simplest is an order 1 rule having a single integration point in the barycentre with a weight equal to the reference area/volume of the element. All integration rules are symmetric with respect to the barycentric coordinates [^5], the points are within the reference element, all weights are positive and the sum is equal to the reference area ($\frac12$ and $\frac16$ for the reference triangle and tetrahedron, respectively).
+For triangles and tetrahedra tabulated data is available from {cite}`Zhang2009`, which give integration rules up to order 21 ($N_\text{g}=91$) for triangles and up to order 14 ($N_\text{g}=236$) for tetrahedra. The simplest is an order 1 rule having a single integration point in the barycentre with a weight equal to the reference area/volume of the element. All integration rules are symmetric with respect to the barycentric coordinates [^6], the points are within the reference element, all weights are positive and the sum is equal to the reference area ($\frac12$ and $\frac16$ for the reference triangle and tetrahedron, respectively).
 
 For integrals on the reference square $[-1,1]\times[-1,1]$ we write:
 
@@ -1602,7 +1602,7 @@ The points in these derived rules for the reference square and cube are within t
 ````{exercise} Exercise 2.31
 :label: ex:2.31
 
-(*EZTFEM*) Study the position of the Gauss-Legendre points on the reference triangle up to $p=21$ and quadrilateral up to $n=20$, 
+(`EZTFEM`) Study the position of the Gauss-Legendre points on the reference triangle up to $p=21$ and quadrilateral up to $n=20$, 
 respectively, using the function *\texttt{plot\_gauss\_legendre}*. Where is the highest density of the points? Determine the scaling
 of the minimum distance to the element boundary with respect to $p$ or $n$.
  
@@ -1622,7 +1622,7 @@ $$
         \qquad k=1,\dots N
 $$ (eq86-chap2)
 
-where we have omitted the integrals on the Neumann boundary for simplicity. The matrix $\mat A$ (with components $A_{km}$) is sparse, but the individual matrices $\mats{\bar A}{e}$ (with components $\bar A_{km}^e$) are even more sparse. In fact, for a particular element $e$ we only have $\bar A_{km}^e\neq0$ for $k$ and $m$ such that the corresponding degrees $u_k$ and $u_m$ belong to the nodes connected to element $e$.
+where we have omitted the integrals on the Neumann boundary for simplicity. The matrix $\mat A$ (with components $A_{km}$) is sparse, but the individual matrices $\mats{\bar A}_{e}$ (with components $\bar A_{km}^e$) are even more sparse. In fact, for a particular element $e$ we only have $\bar A_{km}^e\neq0$ for $k$ and $m$ such that the corresponding degrees $u_k$ and $u_m$ belong to the nodes connected to element $e$.
 
 
 ````{exercise} Exercise 2.32
@@ -1635,20 +1635,20 @@ where we have omitted the integrals on the Neumann boundary for simplicity. The 
 Assuming the number of degrees in an element $e$ to be $N_e$, which is equal to the number of nodes in an element for the steady diffusion problem, we can fit the number of non-zero components in $\mats{\bar A}{e}$ into a square full $N_e\times N_e$ matrix $\mats {A}{e}$, which we will call the *element matrix* or *element stiffness matrix*.
 Similarly we can fit the non-zero components of the column vector $\bar{\cols{f}{e}}$ into a column vector $\cols{f}{e}$ of size $N_e$, the *element vector*.
 
-Now define for each element $e$ an index vector $\cols{k}{e}$ of size $N_e$. This index vector gives the position of all the $N_e$ element degrees of freedom in the global vector of unknowns $\col u$, i.e. the $i^\text{th}$ local element unknown is $u_k$ with $k=k_{e,i}$. The index array can be determined from the  degrees of freedom defined 
+Now define for each element $e$ an index vector $\cols{k}_{e}$ of size $N_e$. This index vector gives the position of all the $N_e$ element degrees of freedom in the global vector of unknowns $\col u$, i.e. the $i^\text{th}$ local element unknown is $u_k$ with $k=k_{e,i}$. The index array can be determined from the  degrees of freedom defined 
 in each node of the mesh and the *connectivity* or *topology* of the mesh, which gives for each element the global nodes it is connected to. 
 The *assembly* of the system matrix and vector can now be defined by
 the following pseudocode:
 
-```{admonition} info
+```{admonition} pseudo-code for FEM assembly
 :class: custom-box
 $$
 \begin{aligned}
 &\quad \mat{A} = \mat{0}; \quad \col{f} = \col{0} \\[.5ex]
 &\quad \text{for } e \text{ in } 1:N_e \\
-&\qquad \text{compute } \cols{k}{e},\; \mats{A}{e},\; \cols{f}{e} \\[.5ex]
-&\qquad \mat{A}(\cols{k}{e}, \cols{k}{e}) \;=\; \mat{A}(\cols{k}{e}, \cols{k}{e}) + \mats{A}{e} \\[.5ex]
-&\qquad \col{f}(\cols{k}{e}) \;=\; \col{f}(\cols{k}{e}) + \cols{f}{e} \\[.5ex]
+&\qquad \text{compute } \cols{k}_{e},\; \mats{A}_{e},\; \cols{f}_{e} \\[.5ex]
+&\qquad \mat{A}(\cols{k}_{e}, \cols{k}_{e}) \;=\; \mat{A}(\cols{k}_{e}, \cols{k}_{e}) + \mats{A}_{e} \\[.5ex]
+&\qquad \col{f}(\cols{k}_{e}) \;=\; \col{f}(\cols{k}_{e}) + \cols{f}_{e} \\[.5ex]
 &\quad \text{end}
 \end{aligned}
 $$
@@ -1659,8 +1659,8 @@ $$
 :class: note
 
 In a programming language that includes sparse matrices as a primary type (such as Matlab), the assembly process can be programmed directly as the pseudocode above. This is very convenient and also powerful, since the sparsity pattern of the matrix does not have to be known beforehand and is determined during the assembly itself.
-This is how the assembly process has been implemented in *EZTFEM*. The drawback of this approach is, that it is slow.
-In *TFEM* the sparsity pattern needed for the storage of the matrix is determined before the actual assembly, in order to speed up the assembly process.
+This is how the assembly process has been implemented in `EZTFEM`. The drawback of this approach is, that it is slow.
+In `TFEM` the sparsity pattern needed for the storage of the matrix is determined before the actual assembly, in order to speed up the assembly process.
 ```
 
 ````{exercise} Exercise 2.33
@@ -1738,17 +1738,17 @@ The number of degrees of freedom is $N'=N+N_\text{D}$. The system matrix $\mat A
 
 $$
 \begin{pmatrix}
-  \mats{A}{\text{uu}} & \mats{A}{\text{up}} \\
-  \mats{A}{\text{pu}} & \mats{A}{\text{pp}} 
+  \mats{A}_{\text{uu}} & \mats{A}_{\text{up}} \\
+  \mats{A}_{\text{pu}} & \mats{A}_{\text{pp}} 
 \end{pmatrix}
 \begin{pmatrix}
- \cols{u}{\text{u}} \\
- \cols{u}{\text{p}}
+ \cols{u}_{\text{u}} \\
+ \cols{u}_{\text{p}}
 \end{pmatrix}
 = 
 \begin{pmatrix}
- \cols{f}{\text{u}} \\
- \cols{f}{\text{p}}
+ \cols{f}_{\text{u}} \\
+ \cols{f}_{\text{p}}
 \end{pmatrix}
 $$ (eq91-chap2)
 
@@ -1756,47 +1756,47 @@ where subindices $\text{u}$ and $\text{p}$ mean unknown and prescribed (Dirichle
 From the partitioned system we find that:
 
 $$
-   \mats{A}{\text{uu}} \cols{u}{\text{u}} = \cols{f}{\text{u}}-\mats{A}{\text{up}} \cols{u}{\text{D}}
+   \mats{A}_{\text{uu}} \cols{u}_{\text{u}} = \cols{f}_{\text{u}}-\mats{A}_{\text{up}} \cols{u}_{\text{D}}
 $$ (eq92-chap2)
 
-where we have substituted $\cols{u}{\text{p}}=\cols{u}{\text{D}}$, where $\cols{u}{\text{D}}$ is the vector of the actual imposed values in the Dirichlet nodes. The matrix system Equation {eq}`eq92-chap2` can be used to solve the unknown degrees of freedom $\cols{u}{\text{u}}$. Note, that Equation {eq}`eq92-chap2` is basically Equation {eq}`eq90-chap2` in matrix notation. The unused part of Equation {eq}`eq91-chap2` can be used to obtain the `reaction force vector' $\cols{r}{\text{p}}$:
+where we have substituted $\cols{u}_{\text{p}}=\cols{u}_{\text{D}}$, where $\cols{u}_{\text{D}}$ is the vector of the actual imposed values in the Dirichlet nodes. The matrix system Equation {eq}`eq92-chap2` can be used to solve the unknown degrees of freedom $\cols{u}_{\text{u}}$. Note, that Equation {eq}`eq92-chap2` is basically Equation {eq}`eq90-chap2` in matrix notation. The unused part of Equation {eq}`eq91-chap2` can be used to obtain the `reaction force vector' $\cols{r}_{\text{p}}$:
 
 $$
-     \cols{r}{\text{p}}=\mats{A}{\text{pu}}\cols{u}{\text{u}}+\mats{A}{\text{pp}}\cols{u}{\text{D}}-\cols{f}{\text{p}}
+     \cols{r}_{\text{p}}=\mats{A}_{\text{pu}}\cols{u}_{\text{u}}+\mats{A}_{\text{pp}}\cols{u}_{\text{D}}-\cols{f}_{\text{p}}
 $$ (eq93-chap2)
 
-The reaction force vector $\cols{r}{\text{p}}$ can be interpreted as the `missing right-hand side' of the flux 
+The reaction force vector $\cols{r}_{\text{p}}$ can be interpreted as the `missing right-hand side' of the flux 
 $h_\text{D}$ on the Dirichlet boundary:
 
 $$
   r_\text{p}^k = \int_{\Gamma_\text{D}}\phi_k h_\text{D}\,d\Gamma,\qquad k=N+1,\dots,N+N_\text{D}
 $$ (eq94-chap2)
 
-In discrete mechanics problems, this vector would indeed represent the reaction forces. The actual implementation of Equation {eq}`eq92-chap2` differs between different finite element codes. For example in *TFEM*, where efficiency is important, the partitioning of the system is already applied during assembly and the four matrices $\mats{A}{\text{uu}}$, $\mats{A}{\text{up}}$, $\mats{A}{\text{pu}}$ and  $\mats{A}{\text{pp}}$
+In discrete mechanics problems, this vector would indeed represent the reaction forces. The actual implementation of Equation {eq}`eq92-chap2` differs between different finite element codes. For example in `TFEM`, where efficiency is important, the partitioning of the system is already applied during assembly and the four matrices $\mats{A}_{\text{uu}}$, $\mats{A}_{\text{up}}$, $\mats{A}_{\text{pu}}$ and  $\mats{A}_{\text{pp}}$
 are stored and assembled separately. This requires some bookkeeping and renumbering of the degrees of freedom.
 
-In *EZTFEM* we have opted for a more simple approach put forward in {cite}`Elman2014`. 
+In `EZTFEM` we have opted for a more simple approach put forward in {cite}`Elman2014`. 
 The full matrix $\mat A$, including the degrees of freedom on the boundary is assembled as one matrix.
-The matrix $\mats{A}{\text{up}}$ is extracted from $\mat A$. The matrix $\mat A$ is subsequently modified into the coefficient matrix
+The matrix $\mats{A}_{\text{up}}$ is extracted from $\mat A$. The matrix $\mat A$ is subsequently modified into the coefficient matrix
 of the following system, which is of the size of the original full system:
 
 $$
 \begin{pmatrix} 
-  \mats{A}{\text{uu}} & \mat 0 \\
+  \mats{A}_{\text{uu}} & \mat 0 \\
   \mat 0             & \mat I 
 \end{pmatrix}
 \begin{pmatrix}
- \cols{u}{\text{u}} \\
- \cols{u}{\text{p}}
+ \cols{u}_{\text{u}} \\
+ \cols{u}_{\text{p}}
 \end{pmatrix}
 = 
 \begin{pmatrix}
- \cols{f}{\text{u}}-\mats{A}{\text{up}}\cols{u}{\text{D}} \\
- \cols{u}{\text{D}}
+ \cols{f}_{\text{u}}-\mats{A}_{\text{up}}\cols{u}_{\text{D}} \\
+ \cols{u}_{\text{D}}
 \end{pmatrix}
 $$ (eq95-chap2)
 
-where $\mat I$ is an identity matrix of the size of the prescribed degrees $\cols{u}{\text{p}}$. 
+where $\mat I$ is an identity matrix of the size of the prescribed degrees $\cols{u}_{\text{p}}$. 
 Note, that the partitioning is not really needed and the original node-for-node sequence of degrees of freedom is kept, where all degrees (unknown and prescribed) keep their original position. A disadvantage of this approach, apart from the slightly bigger system to solve, is the addition of eigenvalue 1 with a multiplicity equal to the number of prescribed degrees of freedom. The user should be 
 aware of this of when analyzing the spectrum of the system matrix.
 
@@ -1804,7 +1804,7 @@ aware of this of when analyzing the spectrum of the system matrix.
 ````{exercise} Exercise 2.37
 :label: ex:2.37
 
-Show that Equation {eq}`eq95-chap2` leads to the correct solution, i.e. $\mats{A}{\text{uu}}\cols{u}{\text{u}}=\cols{f}{\text{u}}-\mats{A}{\text{up}}\cols{u}{\text{D}}$ and $\cols{u}{\text{p}}=\cols{u}{\text{D}}$.
+Show that Equation {eq}`eq95-chap2` leads to the correct solution, i.e. $\mats{A}_{\text{uu}}\cols{u}_{\text{u}}=\cols{f}_{\text{u}}-\mats{A}_{\text{up}}\cols{u}_{\text{D}}$ and $\cols{u}_{\text{p}}=\cols{u}_{\text{D}}$.
 ````
 ### Solving the system of equations
 
@@ -1837,4 +1837,6 @@ variational methods and the road to the finite element method, see {cite}`Gander
 
 [^4]: In isogeometric analysis {cite}`Cottrell2009` the approach is different and the exact (CAD) geometry is the lowest order basis function. In this way, the geometry is exact, even for the “coarsest mesh”.
 
-[^5]: This means, that if a certain integration point on a triangle $(\lambda_1,\lambda_2,\lambda_3)$ has weight $w$, any permutation of that point is also an integration point with that weight. Similarly for tetrahedra.
+[^5]: The symbol $\colnabla$ is used to denote either the coordinate-free gradient operator or its realization as a column vector of partial derivatives after a coordinate system has been fixed. The intended meaning is determined by context.
+
+[^6]: This means, that if a certain integration point on a triangle $(\lambda_1,\lambda_2,\lambda_3)$ has weight $w$, any permutation of that point is also an integration point with that weight. Similarly for tetrahedra.

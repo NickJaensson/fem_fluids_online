@@ -69,7 +69,7 @@ sphinx:
           "deriv": ["\\frac{d #1}{d #2}", 2]
           "mat":  ["\\mathsf{#1}", 1]
           "matt": ["\\mathsf{#1}", 1]
-          "mats": ["{\\enclose{bottom}[padding=0,thickness=0.06em]{#1}}\\!_{\\hspace{2pt}#2}", 2]
+          "mats": ["\\mathsf{#1}", 1]
           "col": ["\\mathsf{#1}", 1]
           "coll": ["\\mathsf{#1}", 1]
           "cols": ["\\mathsf{#1}", 1]

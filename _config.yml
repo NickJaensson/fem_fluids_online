@@ -77,7 +77,8 @@ sphinx:
           "DR": ["\\textrm{DR}"]
           "inv": "{}^{-1}"
           "invT": "{}^{-T}"
- 
+          "colnabla": "\\mathsf{\\nabla}"
+
     html_theme_options:
       logo:
         image_light: FEMfluids_logo.svg
@@ -102,5 +103,5 @@ parse:
 # Information about where the book exists on the web
 repository:
   url:   # Online location of your book
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  branch: main  # Which branch of the repository should be used when creating links (optional)
 

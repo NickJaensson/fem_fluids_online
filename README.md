@@ -2,11 +2,14 @@
 This repo contains the source code to puild a Jupyter book for
 *FEM for fluids*.
 
+The book can be accessed here: 
+https://nickjaensson.github.io/fem_fluids_online
 
-## Buidling the book
-Install `jupyter-book`, by running
+
+## Building the book
+Install required packages, by running
 ```bash
-pip install jupyter-book
+python -m pip install -r requirements.txt
 ```
 Compile the book by running in the root directory of the project
 ```bash

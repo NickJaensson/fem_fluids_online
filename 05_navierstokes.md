@@ -219,17 +219,17 @@ Now we define the matrix $\mat M$ and column vector $\col N(\col u)$ as follows
 $$
    \mat{M}=  
   \begin{pmatrix}
-    \mat{M_{11}} & \mat{M_{12}}&\cdots & \mat{M_{1N_u}}\\
-    \mat{M_{21}} & \mat{M_{22}}&\cdots & \mat{M_{2N_u}}\\
+    \mat{M}_{11} & \mat{M}_{12} & \cdots & \mat{M}_{1N_u} \\
+    \mat{M}_{21} & \mat{M}_{22} & \cdots & \mat{M}_{2N_u} \\
       \vdots & \vdots & \ddots & \vdots \\
-    \mat{M_{N_u1}} & \mat{M_{N_u2}}&\cdots & \mat{M_{N_uN_u}}
+    \mat{M}_{N_u1} & \mat{M}_{N_u2} & \cdots & \mat{M}_{N_uN_u}
   \end{pmatrix},\qquad
        \col{N}(\col{u})=  
   \begin{pmatrix}
-    \col{N_{1}} \\
-    \col{N_{2}} \\
+    \col{N}_{1} \\
+    \col{N}_{2} \\
       \vdots  \\
-    \col{N_{N_u}} 
+    \col{N}_{N_u} 
   \end{pmatrix} 
 $$ (eq17-chap5)
 
@@ -316,10 +316,10 @@ where $\mat{L}(\col{u})$ has been defined as
 $$
    \mat{L}(\col{u})=  
   \begin{pmatrix}
-    \mat{L_{11}} & \mat{L_{12}}&\cdots & \mat{L_{1N_u}}\\
-    \mat{L_{21}} & \mat{L_{22}}&\cdots & \mat{L_{2N_u}}\\
+    \mat{L}_{11} & \mat{L}_{12} & \cdots & \mat{L}_{1N_u} \\
+    \mat{L}_{21} & \mat{L}_{22} & \cdots & \mat{L}_{2N_u} \\
       \vdots & \vdots & \ddots & \vdots \\
-    \mat{L_{N_u1}} & \mat{L_{N_u2}}&\cdots & \mat{L_{N_uN_u}}
+    \mat{L}_{N_u1} & \mat{L}_{N_u2} & \cdots & \mat{L}_{N_uN_u}
   \end{pmatrix}
 $$ (eq25-chap5)
 
@@ -513,10 +513,10 @@ where the matrix $\mat{P}(\col{u})$ has been defined as
 $$
    \mat P(\col u)=  
   \begin{pmatrix}
-    \mat{P_{11}} & \mat{P_{12}}&\cdots & \mat{P_{1N_u}}\\
-    \mat{P_{21}} & \mat{P_{22}}&\cdots & \mat{P_{2N_u}}\\
+    \mat{P}_{11} & \mat{P}_{12} & \cdots & \mat{P}_{1N_u} \\
+    \mat{P}_{21} & \mat{P}_{22} & \cdots & \mat{P}_{2N_u} \\
       \vdots & \vdots & \ddots & \vdots \\
-    \mat{P_{N_u1}} & \mat{P_{N_u2}}&\cdots & \mat{P_{N_uN_u}}
+    \mat{P}_{N_u1} & \mat{P}_{N_u2} & \cdots & \mat{P}_{N_uN_u}
   \end{pmatrix}
 $$ (eq40-chap5)
 

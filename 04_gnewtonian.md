@@ -339,10 +339,10 @@ where $\mat K(\col u)$ has been defined as
 $$
    \mat{K}(\col{u})=  
   \begin{pmatrix}
-    \mat{K_{11}} & \mat{K_{12}}&\cdots & \mat{K_{1N_u}}\\
-    \mat{K_{21}} & \mat{K_{22}}&\cdots & \mat{K_{2N_u}}\\
+    \mat{K}_{11} & \mat{K}_{12} & \cdots & \mat{K}_{1N_u} \\
+    \mat{K}_{21} & \mat{K}_{22} & \cdots & \mat{K}_{2N_u} \\
       \vdots & \vdots & \ddots & \vdots \\
-    \mat{K_{N_u1}} & \mat{K_{N_u2}}&\cdots & \mat{K_{N_uN_u}}
+    \mat{K}_{N_u1} & \mat{K}_{N_u2} & \cdots & \mat{K}_{N_uN_u}
   \end{pmatrix}
 $$ (eq30-chap4)
 
@@ -836,10 +836,10 @@ where the matrix $\mat{K}(\col{u})$ has already been defined in Equation {eq}`eq
 $$
    \mat{G}(\col{u})=  
   \begin{pmatrix}
-    \mat{G_{11}} & \mat{G_{12}}&\cdots & \mat{G_{1N_u}}\\
-    \mat{G_{21}}& \mat{G_{22}}&\cdots & \mat{G_{2N_u}}\\
+    \mat{G}_{11} & \mat{G}_{12} & \cdots & \mat{G}_{1N_u} \\
+    \mat{G}_{21} & \mat{G}_{22} & \cdots & \mat{G}_{2N_u} \\
       \vdots & \vdots & \ddots & \vdots \\
-    \mat{G_{N_u1}} & \mat{G_{N_u2}}&\cdots & \mat{G_{N_uN_u}}
+    \mat{G}_{N_u1} & \mat{G}_{N_u2} & \cdots & \mat{G}_{N_uN_u}
   \end{pmatrix}
 $$ (eq57-chap4)
 

@@ -455,38 +455,38 @@ $$
 \begin{gather*}
    \mat{A}=  
   \begin{pmatrix}
-    \mat{A_{11}} & \mat{A_{12}}&\cdots & \mat{A_{1N_u}}\\
-    \mat{A_{21}} & \mat{A_{22}}&\cdots & \mat{A_{2N_u}}\\
+    \mat{A}_{11} & \mat{A}_{12} & \cdots & \mat{A}_{1N_u} \\
+    \mat{A}_{21} & \mat{A}_{22} & \cdots & \mat{A}_{2N_u} \\
       \vdots & \vdots & \ddots & \vdots \\
-    \mat{A_{N_u1}} & \mat{A_{N_u2}}&\cdots & \mat{A_{N_uN_u}}
+    \mat{A}_{N_u1} & \mat{A}_{N_u2} & \cdots & \mat{A}_{N_uN_u}
   \end{pmatrix},\qquad
      \mat{B}^T=  
   \begin{pmatrix}
-    \col{b_{11}} & \col{b_{12}}&\cdots & \col{b_{1N_p}}\\
-    \col{b_{21}} & \col{b_{22}}&\cdots & \col{b_{2N_p}}\\
+    \col{b}_{11} & \col{b}_{12} & \cdots & \col{b}_{1N_p} \\
+    \col{b}_{21} & \col{b}_{22} & \cdots & \col{b}_{2N_p} \\
       \vdots & \vdots & \ddots & \vdots \\
-    \col{b_{N_u1}} & \col{b_{N_u2}}&\cdots & \col{b_{N_uN_p}}
-  \end{pmatrix}\\
-       \col{{u}}=  
+    \col{b}_{N_u1} & \col{b}_{N_u2} & \cdots & \col{b}_{N_uN_p}
+  \end{pmatrix} \\
+       \col{u}=  
   \begin{pmatrix}
-    \col{u_{1}} \\
-    \col{u_{2}} \\
+    \col{u}_{1} \\
+    \col{u}_{2} \\
       \vdots  \\
-    \col{u_{N_u}} 
+    \col{u}_{N_u} 
   \end{pmatrix},\qquad
-         \col{{p}}=  
+         \col{p}=  
   \begin{pmatrix}
      p_{1} \\
      p_{2} \\
       \vdots  \\
      p_{N_p} 
   \end{pmatrix},\qquad
-         \col{{f}}=  
+         \col{f}=  
   \begin{pmatrix}
-    \col{f_{1}} \\
-    \col{f_{2}} \\
+    \col{f}_{1} \\
+    \col{f}_{2} \\
       \vdots  \\
-    \col{f_{N_u}} 
+    \col{f}_{N_u} 
   \end{pmatrix}
 \end{gather*}
 
